@@ -1,0 +1,20 @@
+# --- Editor / OS ---
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# --- Logs / temp ---
+*.log
+tmp/
+*.tmp
+
+# --- Release / packaging artifacts ---
+dist/
+build/
+*.zip
+
+# --- Lua tooling ---
+.luarc.json
+.luacheckrc
