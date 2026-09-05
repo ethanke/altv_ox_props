@@ -262,6 +262,7 @@ lib.callback.register('ox_props:createSet', function(source, name)
     if not name then return nil end
 
     local id = persist and storage.createSet(name) or nextSetId
+    if not id then return nil end
 
     sets[id] = { id = id, name = name, enabled = true }
 

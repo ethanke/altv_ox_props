@@ -23,6 +23,8 @@ client_scripts {
     'client/main.lua',
     'client/editor.lua',
     'client/menu.lua',
+    'client/preview.lua',
+    'client/catalog.lua',
 }
 
 server_scripts {
@@ -35,7 +37,15 @@ server_scripts {
 files {
     'config.lua',
     'locales/*.json',
+    'data/catalog.lua',
+    'web/index.html',
+    'web/app.js',
+    'web/catalog.js',
+    'web/preview.js',
+    'web/style.css',
 }
+
+ui_page 'web/index.html'
 
 dependencies {
     'ox_lib',

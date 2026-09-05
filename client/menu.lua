@@ -5,23 +5,7 @@ local registerMainMenu, refreshSetSelectMenu, refreshSetManageMenu, refreshSetOp
 
 ---Prompts for a prop model name and starts placing it into the selected set.
 local function addProp()
-    local input = lib.inputDialog(locale('editor.add_prop'), {
-        {
-            type = 'input',
-            label = locale('editor.model_name'),
-            description = locale('editor.model_name_desc'),
-            placeholder = 'prop_bin_05a',
-            required = true,
-            minLength = 1,
-            maxLength = 64,
-        },
-    })
-
-    if not input or not input[1] then return end
-
-    local model = input[1]:lower():gsub('%s+', '')
-
-    StartPlacingProp(model, GetTargetSetId())
+    OpenCatalog()
 end
 
 ---Builds the list of placed props for the list menu.
