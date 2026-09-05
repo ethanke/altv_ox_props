@@ -52,6 +52,20 @@
         "exit_editor": "Exit Editor",
         "toggle_cursor": "Toggle Cursor Mode"
     },
+    "catalog": {
+        "title": "Prop Catalog",
+        "search": "Search models…",
+        "all": "All",
+        "place": "Place",
+        "copy": "Copy",
+        "forge": "Open in Forge",
+        "custom": "Custom Model",
+        "close": "Close",
+        "empty": "No models found.",
+        "results": "%s results",
+        "copied": "Copied %s to clipboard.",
+        "forge_copied": "Forge URL copied to clipboard."
+    },
     "textui": {
         "freecam": "[BACKSPACE] Exit  \n [SPACE] Up  \n [LCTRL] Down  \n [WHEEL] Speed  \n [E] Menu  \n [LALT] Cursor Mode",
         "cursor": "[BACKSPACE] Exit  \n [LALT] Cursor Mode  \n [T] Move  \n [R] Rotate  \n [G] Snap To Ground  \n [L] World/Local  \n [ENTER] Confirm  \n [DEL] Delete"

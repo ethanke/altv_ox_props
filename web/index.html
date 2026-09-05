@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ox_props Catalog</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app" class="hidden" aria-hidden="true">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h1 id="catalog-title">Prop Catalog</h1>
+                <p id="working-set" class="working-set"></p>
+            </div>
+            <nav id="category-list" class="category-list" role="list"></nav>
+        </aside>
+
+        <main class="main">
+            <header class="toolbar">
+                <input
+                    id="search"
+                    type="search"
+                    class="search"
+                    placeholder="Search models…"
+                    autocomplete="off"
+                    spellcheck="false"
+                />
+                <span id="result-count" class="result-count"></span>
+                <div class="toolbar-actions">
+                    <button type="button" id="btn-custom" class="btn btn-ghost">Custom</button>
+                    <button type="button" id="btn-close" class="btn btn-ghost">Close</button>
+                </div>
+            </header>
+
+            <div id="grid-viewport" class="grid-viewport">
+                <div id="grid-spacer" class="grid-spacer">
+                    <div id="grid" class="grid" role="list"></div>
+                </div>
+                <p id="empty-state" class="empty-state hidden"></p>
+            </div>
+
+            <footer class="selection-bar hidden" id="selection-bar">
+                <div class="selection-info">
+                    <span id="selected-model" class="selected-model"></span>
+                    <span id="selected-category" class="selected-category"></span>
+                </div>
+                <div class="selection-actions">
+                    <button type="button" id="btn-forge" class="btn btn-ghost">Forge</button>
+                    <button type="button" id="btn-copy" class="btn btn-ghost">Copy</button>
+                    <button type="button" id="btn-place" class="btn btn-primary">Place</button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="preview.js"></script>
+    <script src="catalog.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

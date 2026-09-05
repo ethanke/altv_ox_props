@@ -69,8 +69,8 @@ props menu.
 ### Adding a prop
 
 1. Run `/props`, select a set, then press **E**.
-2. Choose **Add Prop**.
-3. Type a model name (e.g. `prop_bin_05a`).
+2. Choose **Add Prop** to open the searchable catalog.
+3. Select a model and press **Place**, or choose **Custom Model** to enter a model name (e.g. `prop_bin_05a`).
 4. Position with the gizmo, then press **ENTER**.
 
 Model names are validated against the game's model list before spawning.
@@ -88,6 +88,7 @@ See [`config.lua`](config.lua).
 | `spawnDelay` | `200` | Milliseconds between spawn batches |
 | `gizmoMaxDistance` | `50.0` | Max distance a prop can be moved from its grab origin |
 | `persist` | `false` | Persist props/sets to the database and restore after restart |
+| `preview` | disabled | Optional catalog thumbnail/mesh preview and Forge URL integration |
 
 `permission` may be an ace (e.g. `admin`) or a principal (e.g. `group.admin`),
 resolved through the player's identifiers.
@@ -105,10 +106,12 @@ All prop mutations are validated server-side. The server rejects:
 
 ```
 altv_ox_props
-├── client/          # Streaming, gizmo editor, context menus, DataView
+├── client/          # Streaming, gizmo editor, context menus, catalog bridge, DataView
+├── data/             # Browsable prop catalog
 ├── locales/         # ox_lib locale files
 ├── server/          # Storage (oxmysql), validation, main logic
 ├── sql/             # Persistent schema (install.sql)
+├── web/              # Catalog NUI
 ├── config.lua       # Resource configuration
 └── fxmanifest.lua   # FiveM resource manifest
 ```
