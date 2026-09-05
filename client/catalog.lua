@@ -5,6 +5,7 @@ local categories = require 'data.catalog'
 
 local catalogOpen = false
 local indexBuilt = false
+local Catalog = {}
 
 ---@type { id: string, label: string, count: number }[]
 local categoryMeta = {}
@@ -193,3 +194,8 @@ exports('openCatalog', function()
     OpenCatalog()
     return true
 end)
+
+Catalog.open = OpenCatalog
+Catalog.close = CloseCatalog
+
+return Catalog

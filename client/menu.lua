@@ -1,3 +1,5 @@
+local catalog = require 'client.catalog'
+
 ---Forward declarations: these menus reference each other, so the locals must
 ---exist before any handler runs (a later `local function` is not in scope for
 ---earlier closures — calling it would be a nil-call error).
@@ -5,7 +7,7 @@ local registerMainMenu, refreshSetSelectMenu, refreshSetManageMenu, refreshSetOp
 
 ---Prompts for a prop model name and starts placing it into the selected set.
 local function addProp()
-    OpenCatalog()
+    catalog.open()
 end
 
 ---Builds the list of placed props for the list menu.

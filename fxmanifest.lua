@@ -23,8 +23,6 @@ client_scripts {
     'client/main.lua',
     'client/editor.lua',
     'client/menu.lua',
-    'client/preview.lua',
-    'client/catalog.lua',
 }
 
 server_scripts {

@@ -1,4 +1,5 @@
 local config = require 'config'
+local catalog = require 'client.catalog'
 
 IsEditing = false
 
@@ -422,7 +423,7 @@ function ToggleEditing()
         end
     end
 
-    if CloseCatalog then CloseCatalog() end
+    catalog.close()
     lib.hideTextUI()
 
     if cursorMode then LeaveCursorMode() end
@@ -442,7 +443,7 @@ AddEventHandler('onResourceStop', function(resource)
         RenderScriptCams(false, true, 1000, true, true)
         SetPlayerControl(cache.playerId, true, 0)
         lib.hideTextUI()
-        if CloseCatalog then CloseCatalog() end
+        catalog.close()
         if cursorMode then LeaveCursorMode() end
     end
 end)
